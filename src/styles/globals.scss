@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+
+  --gray-50: #f7f8fa;
+  --gray-100: #e6e8eb;
+  --gray-200: #afb2b1;
+  --gray-500: #808080;
+  --gray-800: #494d4b;
+
+  --blue-500: rgb(188, 213, 243);
+
+  --pink-300: rgb(248, 231, 223);
+  --pink-400: #EDCEE5;
+  --pink-500: rgb(221, 195, 224);
+  --item-height: 488px;
+  --item-right: 20px;
+  --item-left: 0px;
+  --item-bottom: 48px;
+  --last: 6n;
+  --item-width: calc((100% / 6) - (var(--item-right)*1));
+}
+
+@media (max-width: 1080px) {
+  :root{
+            
+    --item-height:488px;
+    --item-left:20px;
+    --item-right:8px;
+    --item-bottom:20px;
+    --item-width:calc((100% / 2) - (var(--item-right)*3));
+  }
+
+  html {
+    font-size: 93.75% //15px
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 85.5% //14px
+  }
+}
+
+body {
+  background: var(--gray-50);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1rem Inter, sans-serif;
+  color: var(--gray-500)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: Lexend, sans-serif;
+  color: var(--gray-800)
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}
