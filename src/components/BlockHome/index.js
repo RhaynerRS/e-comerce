@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 import Image from "next/image"
+import styled, { keyframes } from 'styled-components';
 
 export default function BlockHome(props) {
 
