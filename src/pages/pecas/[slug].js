@@ -6,7 +6,7 @@ import NumberInput from "../../components/NumberInput";
 export default function Details(item) {
   return (
     <div className={styles.containerDetails}>
-      <Carousel width="calc((100% /1.3)" showStatus="false" autoPlay="true" axis="vertical" infiniteLoop="true" showArrows="false">
+      <Carousel width="calc((100% /1.4)" showStatus="false" autoPlay="true" axis="vertical" infiniteLoop="true" showArrows="false">
         <div>
           <img src={item.item.productimage1.url} />
         </div>
