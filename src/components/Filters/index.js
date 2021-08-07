@@ -9,6 +9,8 @@ export default function Filters() {
             <form>
                 <fieldset >
                     <legend><span>Tipo de Produto</span></legend>
+                    <p>Camisetas</p>
+                    <p>Ecobags</p>
                 </fieldset>
             </form>
         </div>

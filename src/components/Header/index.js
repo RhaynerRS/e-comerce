@@ -19,8 +19,8 @@ export function Header(props) {
                 <Link activeClass="active" to="contatos" href="/" spy={true} smooth={true} duration={500} className={styles.Link} ignoreCancelEvents={true} >contate-nos</Link></>
             ):(<><a href="/#sobre">sobre</a>
             <a href="/#contatos">contate-nos</a></>)}
-            <a><FontAwesomeIcon icon={faShoppingCart} /></a>
-            <a><FontAwesomeIcon icon={faUser} /></a>
+            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faUser} />
                 </nav>
         </header>
     )
