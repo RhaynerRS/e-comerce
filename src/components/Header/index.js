@@ -1,7 +1,8 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 import styles from './styles.module.scss';
 import {useEffect,useState} from "react"
-
+import { faUser,faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export function Header(props) {
     return (
@@ -18,6 +19,8 @@ export function Header(props) {
                 <Link activeClass="active" to="contatos" href="/" spy={true} smooth={true} duration={500} className={styles.Link} ignoreCancelEvents={true} >contate-nos</Link></>
             ):(<><a href="/#sobre">sobre</a>
             <a href="/#contatos">contate-nos</a></>)}
+            <a><FontAwesomeIcon icon={faShoppingCart} /></a>
+            <a><FontAwesomeIcon icon={faUser} /></a>
                 </nav>
         </header>
     )

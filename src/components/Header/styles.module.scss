@@ -22,10 +22,10 @@
         a {
             text-decoration: none;
             color: black;
-            margin-inline: 1.5rem;
+            margin-inline: 1.2rem;
 
             &:last-child {
-                margin-inline: 1.5rem 0;
+                margin-inline: 1.2rem;
             }
         }
     }
@@ -33,4 +33,5 @@
     .Link:hover {
         cursor: pointer;
     }
+
 }

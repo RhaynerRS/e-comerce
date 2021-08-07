@@ -3,10 +3,11 @@ import { Carousel } from 'react-responsive-carousel';
 import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
 
+
 export default function Details(item) {
   return (
     <div className={styles.containerDetails}>
-      <Carousel width="calc((100% /1.45)"autoPlay="true" axis="vertical" infiniteLoop="true">
+      <Carousel width="calc((100% /1.45)" autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false}>
         <div>
           <img src={item.item.productimage1.url} />
         </div>
@@ -31,14 +32,13 @@ export default function Details(item) {
                 <option>G - (76 x 56 cm)</option>
                 <option>GG - (80 x 60 cm)</option>
                 <option>XG - (84 x 66 cm)</option>
-
               </select>
             </div>
           </div>
           <div >
             <div className={styles.imputArea}>
-            <NumberInput />
-            <button >Adicionar ao carrinho</button>
+              <NumberInput />
+              <button >Adicionar ao carrinho</button>
             </div>
           </div>
         </form>
@@ -71,8 +71,6 @@ export async function getStaticProps(ctx) {
       "query": `query{
         product(filter:{id:{eq:${slug}}}){
         productname
-              _status
-      _publishedAt
       productimage1{
         url
       }
@@ -90,6 +88,6 @@ export async function getStaticProps(ctx) {
     props: {
       item,
     },
-    revalidate: 60 * 60*24
+    revalidate: 60 * 60 * 24
   }
 }
