@@ -5,10 +5,10 @@
     input{
         border:none;border-bottom: 2px solid;margin-left: auto;margin-right: auto;
         height:50px;width:70%;background-color: transparent;padding:1rem;font-size:20px;
-
+        &:focus{color:var(--black)}
     }
     a{
-        margin-left: 15px;margin-right: 15px;font-size: 16px;line-height: 30px;
+        margin-left: 15px;margin-right: 15px;font-size: 16px;line-height: 30px; color:var(--black);
     }
     .text{
         display: flex;align-items: center;justify-content: space-between;width: 100%; margin-top: 10px;padding-inline: 17rem;
