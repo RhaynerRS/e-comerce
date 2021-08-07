@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => { setUrl (window.location.href.split("/")[3])},)
     return (
         <div className={styles.wrapper}>
+            <Header url={url}/>
             <main>
-                <Header url={url}/>
                 <Component {...pageProps} />
             </main>
         </div>
