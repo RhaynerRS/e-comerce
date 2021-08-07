@@ -6,7 +6,7 @@ import NumberInput from "../../components/NumberInput";
 export default function Details(item) {
   return (
     <div className={styles.containerDetails}>
-      <Carousel width="calc((100% /1.45)" showStatus="false" autoPlay="true" axis="vertical" infiniteLoop="true" showArrows="false">
+      <Carousel width="calc((100% /1.45)"autoPlay="true" axis="vertical" infiniteLoop="true">
         <div>
           <img src={item.item.productimage1.url} />
         </div>
@@ -90,6 +90,6 @@ export async function getStaticProps(ctx) {
     props: {
       item,
     },
-    revalidate: 60 * 60
+    revalidate: 60 * 60*24
   }
 }
