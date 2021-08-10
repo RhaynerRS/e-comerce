@@ -20,7 +20,7 @@ export function Header(props) {
             ):(<><a href="/#sobre">sobre</a>
             <a href="/#contatos">contate-nos</a></>)}
             <a><FontAwesomeIcon icon={faShoppingCart} /></a>
-            <a><FontAwesomeIcon icon={faUser} /></a>
+            <a href="/login"><FontAwesomeIcon icon={faUser} /></a>
                 </nav>
         </header>
     )

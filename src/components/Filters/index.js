@@ -1,6 +1,8 @@
 import menu from '../../utils/menu';
 import styles from './styles.module.scss';
-export default function Filters() {
+
+export default function Filters(props) {
+
     return (
         <div id="filter" className={styles.menu}>
             <div>
@@ -9,7 +11,8 @@ export default function Filters() {
             <form>
                 <fieldset >
                     <legend><span>Tipo de Produto</span></legend>
-                    <p>Camisetas</p>
+                    <p id="text">Camisetas</p>
+                    
                     <p>Ecobags</p>
                 </fieldset>
             </form>

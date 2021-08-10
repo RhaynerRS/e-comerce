@@ -1,16 +1,19 @@
+import { useEffect } from "react";
 import Filters from "../components/Filters";
 import ProductCard from "../components/ProductCard";
 import SeachBar from "../components/SearchBar";
 import styles from '../styles/products.module.scss'
 
 export default function pecas(products) {
+    const produtos=products.products
+    /**/
     return (
         <>
             <Filters />
             <SeachBar />
             <body className={styles.productsContainer}>
                 <ul className={styles.ul}>
-                    {products.products.map((product) => { return <ProductCard key={product.id} image={product.productimage1.url} id={product.id} price={product.productprice} name={product.productname} /> })}
+                    {produtos.map((product) => { return <ProductCard key={product.id} image={product.productimage1.url} id={product.id} price={product.productprice} name={product.productname} /> })}
                 </ul>
             </body>
         </>)
@@ -29,6 +32,7 @@ export async function getStaticProps() {
                  allProducts {
                     id
                     productname
+                    productcategory
                     productprice
                     productimage1{url}
                 }
