@@ -1,6 +1,10 @@
 .container {
     width: 100%;
-
+    
+    background-repeat: no-repeat;
+    background-size: 82%;
+    background-position-y: calc(35%);
+    background-position-x: center;
     .corpo {
         z-index: 91;
         height: 100vh;

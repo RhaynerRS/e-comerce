@@ -1,11 +1,16 @@
 .containerDetails{
-    background: var(--pink-300);
+    background: var(--gray-50);
     display: flex;
     flex-direction: row;
     width: 100%;height: 92.5vh;
     justify-content: center;
     align-items: center;
     margin-block-start: 7.5vh;
+    background-image: url('/blob4.svg');
+    background-repeat: no-repeat;
+    background-size:130%;
+    background-position-x: -40%;
+    background-position-y:37.81%;
     Carousel{
         display: block;
         
@@ -29,8 +34,8 @@
   
         margin-block-start: 1.5em;
           border-radius: 20px;
-          border: 1px solid #EDCEE5;
-          background-color: #EDCEE5;
+          border: 1px solid var(--pink-400);
+          background-color: var(--pink-400);
           color: black;
           font-size: 12px;
           font-weight: bold;
@@ -41,12 +46,13 @@
       }
       input:focus{outline: none;}
       .dropdown{
+          
           width: 100%;
           border-radius:6px;
           font-size:20px;
           line-height: 1.42857143;
           height: 34px;
-          border: 1px solid var(--gray-300);
+          border: 2px solid var(--gray-100);
           &:focus{outline: none;}
       }
     @media (max-width: 1080px) {

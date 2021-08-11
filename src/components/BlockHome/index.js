@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components';
 export default function BlockHome(props) {
 
     return (
-        <section className={styles.container} style={{ background: `var(${props.color})`, }} id={props.name}>
+        <section className={styles.container} style={{ backgroundColor: `var(${props.color})`,backgroundImage: `url('/blob${props.blob}.svg')` }} id={props.name}>
             <div className={styles.corpo}>
                 {props.alter == true ?
                     (<><div className={styles.foto}>

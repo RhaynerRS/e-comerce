@@ -1,6 +1,6 @@
 .mySearch{
     display: flex;align-items: center;justify-content: space-between;width: 100%;height: 92px;position: fixed;top: 4.5rem;z-index: 99;
-    left: 0;background: #EDCEE5;flex-direction: column;transition:0.5s;
+    left: 0;background: var(--pink-400);flex-direction: column;transition:0.5s;
 
     input{
         border:none;border-bottom: 2px solid;margin-left: auto;margin-right: auto;
