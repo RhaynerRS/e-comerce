@@ -1,19 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Filters from "../components/Filters";
 import ProductCard from "../components/ProductCard";
 import SeachBar from "../components/SearchBar";
 import styles from '../styles/products.module.scss'
+import isNode from 'is-node'
 
 export default function pecas(products) {
-    const produtos=products.products
-    /**/
+
+    const [fil, setFil] = useState("")
+
+    function Filter(id) {
+        if (!isNode) {
+            const cat = document.getElementById(id).innerHTML;
+            setFil(cat);
+        }
+    }
+
+    function Erase(){
+        setFil("");
+        console.log(fil)
+    }
+    const produtos = products.products
+
     return (
         <>
-            <Filters />
+            <Filters func={Filter} erase={Erase}/>
             <SeachBar />
             <body className={styles.productsContainer}>
                 <ul className={styles.ul}>
-                    {produtos.map((product) => { return <ProductCard key={product.id} image={product.productimage1.url} id={product.id} price={product.productprice} name={product.productname} /> })}
+                    {fil != "" ? (produtos.filter(function (el) { return el.productcategory == fil }).map((product) => { return <ProductCard key={product.id} image={product.productimage1.url} id={product.id} price={product.productprice} name={product.productname} /> })) :
+                        (produtos.map((product) => { return <ProductCard key={product.id} image={product.productimage1.url} id={product.id} price={product.productprice} name={product.productname} /> }))}
                 </ul>
             </body>
         </>)

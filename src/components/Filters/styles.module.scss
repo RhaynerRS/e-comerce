@@ -1,26 +1,43 @@
 
 .menu{
     position:fixed;
-    background:#EDCEE5;
+    background:var(--pink-400);
     z-index: 11000000;
     top:0px;
     height:100%;
     width:350px;
     right:-350px;
-        transition: right 0.3s;
+    transition: right 0.3s;
     padding-block-start: 40px;
     padding-inline-start: 40px;
     padding-inline-end: 30px;
     font-size:16px;
+    .subMenu{
+        text-transform: uppercase;display:flex;justify-content: space-between;
+    }
     .limpar{
-        color: gray;
+        color: white;opacity: 0.8;
         &:hover{
-            color: black;
+            opacity:1;
         }
     }
-
+    fieldset{
+        margin-block: 1.5rem;
+        display:flex;flex-direction:column;
+        color: white;border: none;
+        span{
+            font-weight: 600;
+        }
+        a{
+            margin-block: 0.5rem;
+            font-weight: 400;
+            &:hover{
+               cursor:pointer;
+            }
+        }
+    }
     .fechar{
-        color: black;cursor: pointer;
+        color: white;cursor: pointer;
     }
     input[type=checkbox]{
         margin:0px;
