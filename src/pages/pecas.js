@@ -5,7 +5,7 @@ import SeachBar from "../components/SearchBar";
 import styles from '../styles/products.module.scss'
 import isNode from 'is-node'
 
-export default function pecas(products) {
+export default function Pecas(products) {
 
     const [fil, setFil] = useState("")
 
