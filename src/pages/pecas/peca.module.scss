@@ -1,4 +1,5 @@
 .containerDetails{
+    
     background: var(--gray-50);
     display: flex;
     flex-direction: row;
@@ -11,10 +12,12 @@
     background-size:130%;
     background-position-x: -40%;
     background-position-y:37.81%;
-    Carousel{
+
+
+    .slider-wrapper{
         display: block;
-        
     }
+
     h3{
         margin-block: 1rem;
     }

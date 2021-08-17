@@ -2,13 +2,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
-
+import isNode from 'is-node'
 
 export default function Details(item) {
+
   return (
     <div className={styles.containerDetails}>
-      <Carousel width="calc((100% /1.45)" autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false}>
-        <div>
+      <Carousel width='calc((100%/1.45))' dynamicHeight='true' thumbWidth='50px' autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false} >
+        <div >
           <img src={item.item.productimage1.url} />
         </div>
         <div>
@@ -23,9 +24,9 @@ export default function Details(item) {
         <p className={styles.txt}>{item.item.productname}</p>
         <p className={styles.txt}>R${item.item.productprice}</p>
         <form >
-          <div >
+          <div style={item.item.productcategory!="Ecobags"?({display:"block"}):({display:"none"})}>
             <div className={styles.imputArea}>
-              <select className={styles.dropdown}>
+              <select className={styles.dropdown} >
                 <option selected="selected">PP - (65 x 48 cm)</option>
                 <option>P - (70 x 52 cm)</option>
                 <option>M - (72 x 54 cm)</option>
@@ -71,6 +72,7 @@ export async function getStaticProps(ctx) {
       "query": `query{
         product(filter:{id:{eq:${slug}}}){
         productname
+        productcategory
       productimage1{
         url
       }

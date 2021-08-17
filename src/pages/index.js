@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Blob } from 'react-blob'
 import BlockHome from '../components/BlockHome'
 import styles from '../styles/home.module.scss'
 
