@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-block-start: 6.25rem;
+    padding-inline: 3rem;
+    background: var(--gray-50);
+
+    .part {
+        div {
+            margin-block-end: 1rem;
+        }
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-inline-end: 1rem;
+        }
+    }
+
+    .subTotal {
+        width: 22rem;
+        border: 1.5px dotted var(--gray-200);
+        padding: 0.8rem;
+        border-radius: 4px;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    button {
+        border-radius: 5px;
+        width: 22rem;
+        padding: .5rem;
+        border: none;
+        color: var(--white);
+        font-weight: 600;
+        background: var(--green-500)
+    }
+
+    .back {
+        color: var(--blue-500);
+        text-decoration: none;
+    }
+
+    .frete {
+        width: var(--widthCart);
+
+        form {
+            max-height: 145px;
+
+            input {
+                padding: 0.5rem;
+                font-size: 0.9375rem;
+                min-width: 328px;
+                line-height: 1.25rem;
+                border: 1px solid var(--blue-500);
+                border-radius: 5px 0px 0px 5px;
+            }
+
+            button {
+                background: var(--blue-500);
+                font-size: 0.75rem;
+                font-weight: 500;
+                height: 38px;
+                width: 5rem;
+                font-size: 16px;
+                padding: .5rem;
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+    }
+
+    .produto {
+        padding-inline: .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            h3 {
+                font-weight: lighter;
+                font-size: 1rem;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-inline-end: 2rem;
+            }
+        }
+
+        .quantidade {
+            a {
+                font-weight: 400;
+            }
+
+            display: flex;
+            width: 10rem;
+            justify-content: space-between;
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0;
+                /* <-- Apparently some margin are still there even though it's hidden */
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+                border: none;
+                width: 2rem;
+                text-align: center;
+            }
+
+            button {
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 3px;
+                background-color: var(--gray-500);
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:focus {
+                    background-color: var(--gray-800);
+                }
+            }
+        }
+    }
+}
