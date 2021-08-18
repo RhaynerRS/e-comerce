@@ -1,6 +1,6 @@
 # E-COMERCE (em desenvolvimento)
 
-Um projeto de e-comerce feito para a loja [Veja aqui o resultado final](https://www.instagram.com/papel.de.pano/?hl=pt-br) e para treinar react
+Um projeto de e-comerce feito para a loja [papel de pano](https://www.instagram.com/papel.de.pano/?hl=pt-br) e para treinar react
 
 [Veja aqui como esta ficando](https://papel-de-pano.vercel.app)
 
