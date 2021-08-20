@@ -5,7 +5,7 @@ import NumberInput from "../../components/NumberInput";
 import isNode from 'is-node'
 
 export default function Details(item) {
-
+  
   return (
     <div className={styles.containerDetails}>
       <Carousel width='calc((100%/1.45))' dynamicHeight='true' thumbWidth='50px' autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false} >
@@ -24,7 +24,7 @@ export default function Details(item) {
         <p className={styles.txt}>{item.item.productname}</p>
         <p className={styles.txt}>R${item.item.productprice}</p>
         <form >
-          <div style={item.item.productcategory!="Ecobags"?({display:"block"}):({display:"none"})}>
+          <div style={item.item.productcategory != "Ecobags" ? ({ display: "block" }) : ({ display: "none" })}>
             <div className={styles.imputArea}>
               <select className={styles.dropdown} >
                 <option selected="selected">PP - (65 x 48 cm)</option>
@@ -39,7 +39,12 @@ export default function Details(item) {
           <div >
             <div className={styles.imputArea}>
               <NumberInput />
-              <button >Adicionar ao carrinho</button>
+              <button className="snipcart-add-item"
+                data-item-id={item.item.id}
+                data-item-image={item.item.productimage1.url}
+                data-item-name={item.item.productname}
+                data-item-url={`/pecas/${item.item.id}`}
+                data-item-price={item.item.productprice}>Adicionar ao carrinho</button>
             </div>
           </div>
         </form>
@@ -71,6 +76,7 @@ export async function getStaticProps(ctx) {
     body: JSON.stringify({
       "query": `query{
         product(filter:{id:{eq:${slug}}}){
+          id
         productname
         productcategory
       productimage1{

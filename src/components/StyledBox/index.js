@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const StyledBox= styled.div`
     background:white;
     border-radius:4px;
-    
     padding:1rem;
     box-shadow: 0px 3px 6px #0000000f;
     hr{

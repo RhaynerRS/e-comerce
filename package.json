@@ -16,7 +16,7 @@
     "classnames": "^2.3.1",
     "graphql-request": "^3.5.0",
     "is-node": "^1.0.2",
-    "next": "^11.0.1",
+    "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",

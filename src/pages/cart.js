@@ -10,7 +10,7 @@ export default function Cart() {
     return (
         <section className={styles.container}>
             <div className={styles.part}>
-                <div className={styles.title}><h1>Sacola</h1><span>(2 items)</span></div>
+                <div className={styles.title}><h1>Carrinho</h1><span>(2 items)</span></div>
                 <StyledBox>
                     <div><h3>Calcule frete e prazo</h3></div>
                     <div className={styles.frete}>
@@ -18,6 +18,7 @@ export default function Cart() {
                             <input placeholder="Digite seu CEP aqui" />
                             <button >Aplicar</button>
                         </form>
+                        <a href="https://achacep.com.br">Não sei meu CEP</a>
                     </div>
                 </StyledBox>
 
@@ -39,7 +40,7 @@ export default function Cart() {
                                 <button onClick={()=>Plus("qtd")}><FontAwesomeIcon icon={faPlus} /></button>
                             </div>
                         </div>
-                        <FontAwesomeIcon icon={faTrashAlt} />
+                        <a className={styles.delete}><FontAwesomeIcon icon={faTrashAlt} /></a>
                     </div>
                     <hr />
                 </StyledBox>
