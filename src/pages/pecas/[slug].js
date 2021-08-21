@@ -3,9 +3,12 @@ import { Carousel } from 'react-responsive-carousel';
 import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
 import isNode from 'is-node'
+import { useEffect, useState } from "react"
 
 export default function Details(item) {
-  
+
+  const [qtd,setQtd]=useState(1);
+  const [size,setSize]=useState("M - (72 x 54 cm)");
   return (
     <div className={styles.containerDetails}>
       <Carousel width='calc((100%/1.45))' dynamicHeight='true' thumbWidth='50px' autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false} >
@@ -26,10 +29,10 @@ export default function Details(item) {
         <form >
           <div style={item.item.productcategory != "Ecobags" ? ({ display: "block" }) : ({ display: "none" })}>
             <div className={styles.imputArea}>
-              <select className={styles.dropdown} >
-                <option selected="selected">PP - (65 x 48 cm)</option>
+              <select className={styles.dropdown} id="size" onChange={(e)=>{setSize(e.target.value)}}>
+                <option >PP - (65 x 48 cm)</option>
                 <option>P - (70 x 52 cm)</option>
-                <option>M - (72 x 54 cm)</option>
+                <option selected="selected">M - (72 x 54 cm)</option>
                 <option>G - (76 x 56 cm)</option>
                 <option>GG - (80 x 60 cm)</option>
                 <option>XG - (84 x 66 cm)</option>
@@ -37,14 +40,20 @@ export default function Details(item) {
             </div>
           </div>
           <div >
+          
             <div className={styles.imputArea}>
-              <NumberInput />
+              <NumberInput qtd={(e)=>{setQtd(e.target.value)}}/>
               <button className="snipcart-add-item"
                 data-item-id={item.item.id}
                 data-item-image={item.item.productimage1.url}
                 data-item-name={item.item.productname}
                 data-item-url={`/pecas/${item.item.id}`}
-                data-item-price={item.item.productprice}>Adicionar ao carrinho</button>
+                data-item-price={item.item.productprice}
+                data-item-quantity={qtd }
+                data-item-custom1-name="Tamanho"
+                data-item-custom1-options="PP - (65 x 48 cm)|P - (70 x 52 cm)|M - (72 x 54 cm)|G - (76 x 56 cm)|GG - (80 x 60 cm)|XG - (84 x 66 cm)"
+                data-item-custom1-value={size}
+                >Adicionar ao carrinho</button>
             </div>
           </div>
         </form>
