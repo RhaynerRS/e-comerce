@@ -20,7 +20,7 @@ export function Header(props) {
             ):(<><a href="/#sobre">sobre</a>
             <a href="/#contatos">contate-nos</a></>)}
             <a  className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingCart} />(<span className="snipcart-items-count badge badge-warning">0</span>)</a>
-            <a href="/login"><FontAwesomeIcon icon={faUser} /></a>
+            
                 </nav>
         </header>
     )

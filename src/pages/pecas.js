@@ -18,7 +18,6 @@ export default function Pecas(products) {
 
     function Erase(){
         setFil("");
-        console.log(fil)
     }
     const produtos = products.products
 

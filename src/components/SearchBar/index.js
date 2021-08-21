@@ -5,9 +5,7 @@ export default function SeachBar() {
         <div className={styles.mySearch} id="search"><input type="text" placeholder="Search..." />
             <div className={styles.text}>
                 <div>
-                    <a className={styles.click}href='#' >Masculino</a>
-                    <a className={styles.click}href='#' >Fenino</a>
-                    <a className={styles.click}href='#' >Unisex</a>
+
                 </div>
                 <div><a onClick={menu} className={styles.click} >FILTROS</a></div>
             </div>
