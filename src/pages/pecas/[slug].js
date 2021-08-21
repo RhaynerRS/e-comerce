@@ -42,7 +42,7 @@ export default function Details(item) {
           <div >
           
             <div className={styles.imputArea}>
-              <NumberInput qtd={(e)=>{setQtd(e.target.value)}}/>
+              <NumberInput quanti={(e)=>{setQtd(e.target.value)}}/>
               <button className="snipcart-add-item"
                 data-item-id={item.item.id}
                 data-item-image={item.item.productimage1.url}
