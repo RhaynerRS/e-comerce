@@ -15,6 +15,7 @@ export default function Filters(props) {
                     <legend><span>Tipo de Produto</span></legend>
                     <a id="camisas" onClick={() => props.func(event.target.id)}>Camisetas</a>
                     <a id="ecobags" onClick={() => { props.func(event.target.id) }}>Ecobags</a>
+                    <a id="Moletons" onClick={() => { props.func(event.target.id) }}>Moletons</a>
                 </fieldset>
             </form>
         </div>
