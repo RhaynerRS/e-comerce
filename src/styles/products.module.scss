@@ -4,9 +4,9 @@
     overflow-y: scroll;
     background-image: url('/blob4.svg');
     background-repeat: no-repeat;
-    background-size:130%;
-    background-position-x: -40%;
-    background-position-y:30%;
+    background-size:150%;
+    background-position: center;
+    background-attachment: fixed;
 
     .ul {
         list-style-type: disc;
@@ -35,7 +35,12 @@
             }
         }
     }
-
+    @media (max-width: 1080px) {
+        background-size:250%;
+    }
+    @media (max-width: 720px) {
+        background-size:350%;
+    }
     @keyframes fade-in {
         from {
             opacity: 0;

@@ -34,5 +34,48 @@
     .Link:hover {
         cursor: pointer;
     }
-
+    @media (max-width: 450px) {
+        font-size: 85.5%;
+        nav {
+            a {
+                margin-inline: 1rem;
+                &:last-child {
+                    margin-inline: 1rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        font-size: 75%;
+        nav {
+            a {
+                margin-inline: 0.8rem;
+                &:last-child {
+                    margin-inline: 0.8rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        font-size: 70%;
+        nav {
+            a {
+                margin-inline: 0.6rem;
+                &:last-child {
+                    margin-inline: 0.6rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 300px) {
+        font-size: 53%;
+        nav {
+            a {
+                margin-inline: 0.4rem;
+                &:last-child {
+                    margin-inline: 0.4rem;
+                }
+            }
+        }
+    }
 }
