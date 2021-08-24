@@ -33,6 +33,15 @@ function MyApp({ Component, pageProps }) {
                 data-config-modal-style="side"
                 data-api-key="YzI2ODQ5ZGEtODRiMC00Yzg5LTg3NTctOTU2MTEwZWJiNjkzNjM3NjQ5MTkyMjAyMzYyOTEw"
                 hidden>
+                <address-fields section="top">
+                    <div>
+                        <snipcart-label for="cpf">
+                            CPF
+                        </snipcart-label>
+                        <snipcart-input name="cpf">
+                        </snipcart-input>
+                    </div>
+                </address-fields>
             </div >
         </div >
     )
