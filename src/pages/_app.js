@@ -36,7 +36,6 @@ function MyApp({ Component, pageProps }) {
                 <address-fields section="top">
                     <div>
                         <snipcart-label for="cpf">
-                            CPF
                         </snipcart-label>
                         <snipcart-input name="cpf">
                         </snipcart-input>
