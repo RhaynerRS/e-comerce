@@ -36,14 +36,15 @@ export default function Details(item) {
             <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage2.url} /></div>
             <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage3.url} /></div>
           </div>
-        </div>
-        <div className={styles.divCarousel}>
-        <a className={styles.buttonCarousel} onClick={scrollPrev}>
+          <a className={styles.buttonCarousel} onClick={scrollPrev}>
         <FontAwesomeIcon icon={faChevronLeft} />
         
         </a>
         <a className={styles.buttonCarousel} onClick={scrollNext}>
         <FontAwesomeIcon icon={faChevronRight} />
+        </div>
+        <div className={styles.divCarousel}>
+
         </a>
         </div>
       </div>
