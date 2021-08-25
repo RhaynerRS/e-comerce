@@ -41,11 +41,11 @@ export default function Details(item) {
         
         </a>
         <a className={styles.buttonCarousel} onClick={scrollNext}>
-        <FontAwesomeIcon icon={faChevronRight} />
+        <FontAwesomeIcon icon={faChevronRight} /></a>
         </div>
         <div className={styles.divCarousel}>
 
-        </a>
+        
         </div>
       </div>
       <div className={styles.info}>
