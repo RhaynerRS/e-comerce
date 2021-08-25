@@ -3,7 +3,7 @@ import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
 import { useEmblaCarousel } from 'embla-carousel/react'
 import { useEffect, useState, useCallback } from "react"
-import { faUser,faShoppingCart , faChevronRight,faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faShoppingCart, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Details(item) {
@@ -38,13 +38,13 @@ export default function Details(item) {
           </div>
         </div>
         <div className={styles.divCarousel}>
-        <a className={styles.buttonCarousel} onClick={scrollPrev}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-        
-        </a>
-        <a className={styles.buttonCarousel} onClick={scrollNext}>
-        <FontAwesomeIcon icon={faChevronRight} />
-        </a>
+          <a className={styles.buttonCarousel} onClick={scrollPrev}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+
+          </a>
+          <a className={styles.buttonCarousel} onClick={scrollNext}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </a>
         </div>
       </div>
       <div className={styles.info}>
