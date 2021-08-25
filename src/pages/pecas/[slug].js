@@ -1,27 +1,52 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
-import isNode from 'is-node'
-import { useEffect, useState } from "react"
+import { useEmblaCarousel } from 'embla-carousel/react'
+import { useEffect, useState, useCallback } from "react"
+import { faUser,faShoppingCart , faChevronRight,faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Details(item) {
 
-  const [qtd,setQtd]=useState(1);
-  const [size,setSize]=useState("M - (72 x 54 cm)");
+  const [qtd, setQtd] = useState(1);
+  const [size, setSize] = useState("M - (72 x 54 cm)");
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+
+  useEffect(() => {
+    if (emblaApi) {
+      // Embla API is ready
+    }
+  }, [emblaApi])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
   return (
     <div className={styles.containerDetails}>
-      <Carousel width='calc((100%/1.45))' dynamicHeight='true' thumbWidth='50px' autoPlay="true" axis="vertical" infiniteLoop="true" showArrows={false} showStatus={false} >
-        <div >
-          <img src={item.item.productimage1.url} />
+
+      <div className={styles.embla} >
+        <div className={styles.embla__viewport} ref={emblaRef}>
+          <div className={styles.embla__container}>
+            <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage1.url} /></div>
+            <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage2.url} /></div>
+            <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage3.url} /></div>
+          </div>
         </div>
-        <div>
-          <img src={item.item.productimage2.url} />
+        <div className={styles.divCarousel}>
+        <a className={styles.buttonCarousel} onClick={scrollPrev}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+        
+        </a>
+        <a className={styles.buttonCarousel} onClick={scrollNext}>
+        <FontAwesomeIcon icon={faChevronRight} />
+        </a>
         </div>
-        <div>
-          <img src={item.item.productimage3.url} />
-        </div>
-      </Carousel>
+      </div>
       <div className={styles.info}>
         <h1 >{item.item.productname}</h1>
         <p className={styles.txt}>{item.item.productname}</p>
@@ -29,7 +54,7 @@ export default function Details(item) {
         <form >
           <div style={item.item.productcategory != "Ecobags" ? ({ display: "block" }) : ({ display: "none" })}>
             <div className={styles.imputArea}>
-              <select className={styles.dropdown} id="size" onChange={(e)=>{setSize(e.target.value)}}>
+              <select className={styles.dropdown} id="size" onChange={(e) => { setSize(e.target.value) }}>
                 <option >PP - (65 x 48 cm)</option>
                 <option>P - (70 x 52 cm)</option>
                 <option selected="selected">M - (72 x 54 cm)</option>
@@ -40,20 +65,20 @@ export default function Details(item) {
             </div>
           </div>
           <div >
-          
+
             <div className={styles.imputArea}>
-              <NumberInput quanti={(e)=>{setQtd(e.target.value)}}/>
+              <NumberInput quanti={(e) => { setQtd(e.target.value) }} />
               <button className="snipcart-add-item"
                 data-item-id={item.item.id}
                 data-item-image={item.item.productimage1.url}
                 data-item-name={item.item.productname}
                 data-item-url={`/pecas/${item.item.id}`}
                 data-item-price={item.item.productprice}
-                data-item-quantity={qtd }
+                data-item-quantity={qtd}
                 data-item-custom1-name="Tamanho"
                 data-item-custom1-options="PP - (65 x 48 cm)|P - (70 x 52 cm)|M - (72 x 54 cm)|G - (76 x 56 cm)|GG - (80 x 60 cm)|XG - (84 x 66 cm)"
                 data-item-custom1-value={size}
-                >Adicionar ao carrinho</button>
+              >Adicionar ao carrinho</button>
             </div>
           </div>
         </form>
