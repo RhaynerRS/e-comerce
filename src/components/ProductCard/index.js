@@ -1,4 +1,4 @@
-
+import styles from './styles.module.scss';
 export default function ProductCard(props) {
     return (
         <li className={styles.li}>
