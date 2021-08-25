@@ -33,7 +33,6 @@ function MyApp({ Component, pageProps }) {
                 data-config-modal-style="side"
                 data-api-key="YzI2ODQ5ZGEtODRiMC00Yzg5LTg3NTctOTU2MTEwZWJiNjkzNjM3NjQ5MTkyMjAyMzYyOTEw"
                 hidden>
-<<<<<<< HEAD
                 <billing section="bottom">
                     <fieldset class="snipcart-form__set">
                         <div class="snipcart-form__field">
@@ -44,17 +43,6 @@ function MyApp({ Component, pageProps }) {
                         </div>
                     </fieldset>
                 </billing>
-=======
-                <address-fields section="top">
-                    <div>
-                        <snipcart-label for="cpf">
-                            CPF
-                        </snipcart-label>
-                        <snipcart-input name="cpf">
-                        </snipcart-input>
-                    </div>
-                </address-fields>
->>>>>>> cc8d19e8b7b36468835e0e597a22aef46a05c3ab
             </div >
             <script src="js/jquery-331.min.js"></script>
             <script src="js\bootstrap-337.min.js"></script>
