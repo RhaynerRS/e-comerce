@@ -16,14 +16,14 @@ export default function Pecas(products) {
         }
     }
 
-    function Erase(){
+    function Erase() {
         setFil("");
     }
     const produtos = products.products
 
     return (
         <>
-            <Filters func={Filter} erase={Erase}/>
+            <Filters func={Filter} erase={Erase} />
             <SeachBar />
             <body className={styles.productsContainer}>
                 <ul className={styles.ul}>

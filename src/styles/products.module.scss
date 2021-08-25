@@ -4,7 +4,7 @@
     overflow-y: scroll;
     background-image: url('/blob4.svg');
     background-repeat: no-repeat;
-    background-size:150%;
+    background-size: 150%;
     background-position: center;
     background-attachment: fixed;
 
@@ -22,7 +22,7 @@
         width: 100%;
 
         li {
-            animation:fade-in 0.4s ease-in-out;
+            animation: fade-in 0.4s ease-in-out;
             list-style: none;
             display: list-item;
             text-align: -webkit-match-parent;
@@ -30,27 +30,32 @@
             margin-right: var(--item-right);
             margin-left: var(--item-left);
             margin-bottom: var(--item-bottom);
+
             img {
                 width: 100%;
             }
         }
     }
+
     @media (max-width: 1080px) {
-        background-size:250%;
+        background-size: 250%;
     }
+
     @media (max-width: 720px) {
-        background-size:350%;
+        background-size: 350%;
     }
+
     @keyframes fade-in {
         from {
             opacity: 0;
-          transform: translatey(20px);
+            transform: translatey(20px);
         }
+
         to {
             opacity: 1;
-          transform: translatey(0);
+            transform: translatey(0);
         }
-      }
+    }
 
     @media screen and (max-width: 1080px) {
         .ul {

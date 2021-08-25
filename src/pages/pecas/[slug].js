@@ -3,7 +3,7 @@ import styles from './peca.module.scss'
 import NumberInput from "../../components/NumberInput";
 import { useEmblaCarousel } from 'embla-carousel/react'
 import { useEffect, useState, useCallback } from "react"
-import { faUser,faShoppingCart , faChevronRight,faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faShoppingCart, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Details(item) {
@@ -37,15 +37,13 @@ export default function Details(item) {
             <div className={styles.embla__slide}><img className={styles.embla__slide__img} src={item.item.productimage3.url} /></div>
           </div>
         </div>
-        <div className={styles.divCarousel}>
-        <a className={styles.buttonCarousel} onClick={scrollPrev}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-        
+        <a className={styles.embla__button__prev} onClick={scrollPrev}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+
         </a>
-        <a className={styles.buttonCarousel} onClick={scrollNext}>
-        <FontAwesomeIcon icon={faChevronRight} />
+        <a className={styles.embla__button__next} onClick={scrollNext}>
+          <FontAwesomeIcon icon={faChevronRight} />
         </a>
-        </div>
       </div>
       <div className={styles.info}>
         <h1 >{item.item.productname}</h1>

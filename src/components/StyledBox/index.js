@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledBox= styled.div`
+const StyledBox = styled.div`
     background:white;
     border-radius:4px;
     padding:1rem;

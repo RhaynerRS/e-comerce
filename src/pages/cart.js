@@ -1,7 +1,7 @@
 import StyledBox from '../components/StyledBox'
 import styles from '../styles/cart.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faTrashAlt,faMinus,faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faTrashAlt, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { Image } from 'react-bootstrap'
 import Minus from '../utils/minus.js';
 import Plus from '../utils/plus.js';
@@ -35,9 +35,9 @@ export default function Cart() {
                         <div className={styles.quantidade}>
                             <a>qtd:</a>
                             <div>
-                                <button onClick={()=>Minus("qtd")}><FontAwesomeIcon icon={faMinus} /></button>
+                                <button onClick={() => Minus("qtd")}><FontAwesomeIcon icon={faMinus} /></button>
                                 <input type="number" value="1" id="qtd" disabled></input>
-                                <button onClick={()=>Plus("qtd")}><FontAwesomeIcon icon={faPlus} /></button>
+                                <button onClick={() => Plus("qtd")}><FontAwesomeIcon icon={faPlus} /></button>
                             </div>
                         </div>
                         <a className={styles.delete}><FontAwesomeIcon icon={faTrashAlt} /></a>

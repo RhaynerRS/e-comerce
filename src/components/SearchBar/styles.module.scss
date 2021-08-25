@@ -28,8 +28,10 @@
         &:focus {
             opacity: 1;
         }
+
         @media (max-width: 1000px) {
-            font-size: 95%;height: 40px;
+            font-size: 95%;
+            height: 40px;
         }
     }
 
@@ -39,6 +41,7 @@
         font-size: 16px;
         line-height: 30px;
         color: var(--white);
+
         @media (max-width: 1000px) {
             font-size: 85%;
         }
@@ -52,9 +55,11 @@
         width: 100%;
         margin-top: 10px;
         padding-inline: 17rem;
+
         @media (max-width: 1000px) {
             padding-inline: 8.5rem;
         }
+
         @media (max-width: 450px) {
             padding-inline: 3rem;
         }

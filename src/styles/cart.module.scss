@@ -53,10 +53,12 @@
         display: flex;
         align-items: center;
         width: var(--widthCart);
-        a{
+
+        a {
             color: var(--blue-500);
-            font-size:14px;
+            font-size: 14px;
         }
+
         form {
             margin-inline-end: 1rem;
             max-height: 145px;
@@ -84,18 +86,22 @@
     }
 
     .produto {
-        
+
         padding-inline: .7rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .delete{
-            &:hover {background-color: var(--gray-100)}
+        .delete {
+            &:hover {
+                background-color: var(--gray-100)
+            }
+
             padding-inline: 10px;
             padding-block: 6.5px;
             border-radius:50%;
         }
+
         div {
             h3 {
                 font-weight: lighter;

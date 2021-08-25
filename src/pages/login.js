@@ -1,18 +1,19 @@
 import styles from '../styles/login.module.scss'
 import isNode from 'is-node'
 export default function Login() {
-    if (!isNode){
-    const signUpButton = document.getElementById("signUp");
-    const signInButton = document.getElementById("signIn");
-    const container = document.getElementById("container");
-    const overlay = document.getElementById("overlay")
+    if (!isNode) {
+        const signUpButton = document.getElementById("signUp");
+        const signInButton = document.getElementById("signIn");
+        const container = document.getElementById("container");
+        const overlay = document.getElementById("overlay")
 
-    signUpButton.addEventListener("click", () => {
-        container.classList.add("login_rightPanelActive__9nmqD");
-        overlay.classList.add("login_right__3DOUR");
-    });
+        signUpButton.addEventListener("click", () => {
+            container.classList.add("login_rightPanelActive__9nmqD");
+            overlay.classList.add("login_right__3DOUR");
+        });
 
-    signInButton.addEventListener("click", () => { container.classList.remove("login_rightPanelActive__9nmqD"); overlay.classList.remove("login_right__3DOUR");  })}
+        signInButton.addEventListener("click", () => { container.classList.remove("login_rightPanelActive__9nmqD"); overlay.classList.remove("login_right__3DOUR"); })
+    }
 
     return (
         <div className={styles.body}>
