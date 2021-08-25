@@ -44,8 +44,6 @@ function MyApp({ Component, pageProps }) {
                     </fieldset>
                 </billing>
             </div >
-            <script src="js/jquery-331.min.js"></script>
-            <script src="js\bootstrap-337.min.js"></script>
         </div >
     )
 }
