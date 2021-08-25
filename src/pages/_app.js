@@ -33,7 +33,19 @@ function MyApp({ Component, pageProps }) {
                 data-config-modal-style="side"
                 data-api-key="YzI2ODQ5ZGEtODRiMC00Yzg5LTg3NTctOTU2MTEwZWJiNjkzNjM3NjQ5MTkyMjAyMzYyOTEw"
                 hidden>
+                <billing section="bottom">
+                    <fieldset class="snipcart-form__set">
+                        <div class="snipcart-form__field">
+                            <snipcart-label class="snipcart__font--tiny" for="CPF">
+
+                            </snipcart-label>
+                            <snipcart-input name="cpf"></snipcart-input>
+                        </div>
+                    </fieldset>
+                </billing>
             </div >
+            <script src="js/jquery-331.min.js"></script>
+            <script src="js\bootstrap-337.min.js"></script>
         </div >
     )
 }

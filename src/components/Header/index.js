@@ -1,7 +1,7 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 import styles from './styles.module.scss';
 import {useEffect,useState} from "react"
-import { faUser,faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faUser,faShoppingCart , faChevronRigh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export function Header(props) {
