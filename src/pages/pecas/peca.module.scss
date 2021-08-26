@@ -21,7 +21,7 @@
         max-width: 34.125rem;
         height: 42.65625rem;
         @media (max-width: 1080px) {
-            overflow: scroll;
+            overflow: unset;
         }
 
     }
@@ -75,7 +75,6 @@
         height: 30px;
         justify-content: center;
         align-items: center;
-        fill: #1bcacd;
         padding: 0;
     }
 
@@ -96,7 +95,6 @@
         height: 30px;
         justify-content: center;
         align-items: center;
-        fill: #1bcacd;
         padding: 0;
     }
 
