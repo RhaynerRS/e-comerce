@@ -20,6 +20,9 @@
         position: relative;
         max-width: 34.125rem;
         height: 42.65625rem;
+        @media (max-width: 1080px) {
+            overflow: scroll;
+        }
 
     }
 
