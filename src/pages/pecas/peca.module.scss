@@ -160,6 +160,7 @@
     }
 
     @media (max-width: 1080px) {
+        overflow: scroll;
         flex-direction: column;
 
         .info {
@@ -202,11 +203,12 @@
     }
 
     @media (max-width: 720px) {
+        
         .embla {
             overflow: hidden;
             position: relative;
-            max-width: 27.64125rem;
-            height: 34.5515625rem;
+            max-width: 24.877125rem;
+            height: 31.09640625rem;
 
         }
 
