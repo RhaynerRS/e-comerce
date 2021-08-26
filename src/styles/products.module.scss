@@ -85,7 +85,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: aqua;
+        background-color: var(--blue-500);
         border: radius 10px;
     }
 }
